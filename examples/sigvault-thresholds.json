@@ -1,0 +1,17 @@
+{
+  "repo": "sigvault",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 5,
+    "ship": 185,
+    "watch": 129
+  },
+  "terms": [
+    "trust boundary",
+    "claim drift",
+    "replay exposure",
+    "policy width"
+  ]
+}

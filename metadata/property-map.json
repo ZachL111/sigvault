@@ -1,0 +1,28 @@
+{
+  "repo": "sigvault",
+  "language": "Rust",
+  "category": "Security tooling",
+  "goal": "Verify signed envelope canonicalization and replay guards.",
+  "weights": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 5
+  },
+  "thresholds": {
+    "ship": 185,
+    "watch": 129
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
