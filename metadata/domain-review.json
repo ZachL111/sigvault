@@ -1,0 +1,73 @@
+{
+  "repo": "sigvault",
+  "language": "Rust",
+  "category": "Security tooling",
+  "goal": "Verify signed envelope canonicalization and replay guards.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 50,
+      "slack": 54,
+      "drag": 30,
+      "confidence": 89,
+      "score": 153,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 80,
+      "slack": 37,
+      "drag": 22,
+      "confidence": 56,
+      "score": 187,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 86,
+      "slack": 27,
+      "drag": 23,
+      "confidence": 60,
+      "score": 190,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 69,
+      "slack": 46,
+      "drag": 14,
+      "confidence": 48,
+      "score": 190,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 85,
+      "slack": 21,
+      "drag": 11,
+      "confidence": 58,
+      "score": 216,
+      "lane": "ship"
+    }
+  ]
+}
